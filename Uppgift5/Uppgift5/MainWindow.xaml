@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:Uppgift5"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10,0,-10,0">
+    <Grid x:Name="btnmultpi" Margin="10,0,-10,0">
         <TextBox x:Name="Num1" HorizontalAlignment="Left" Margin="315,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Num2" HorizontalAlignment="Left" Margin="315,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="=" HorizontalAlignment="Left" Margin="315,217,0,0" VerticalAlignment="Top" Click="Button_Click" Width="105" Height="30"/>
+        <Button x:Name="Btnmulti" HorizontalAlignment="Left" Margin="384,212,0,0" VerticalAlignment="Top" Click="btnmulti_Click" Width="48" Height="30" Content="*"/>
         <Button x:Name="Btnrensa" Content="Rensa" HorizontalAlignment="Left" Margin="315,262,0,0" VerticalAlignment="Top" Click="Btnrensa_Click"/>
         <TextBox x:Name="btnsum" TextWrapping="Wrap" Margin="250,10,283,326" TextChanged="TextBox_TextChanged_1"/>
-        <Label Content="+" Margin="312,147,447,259" RenderTransformOrigin="0.586,1.075"/>
-        <Label Content="Summa" Margin="192,77,555,326"/>
+        <Label x:Name="Lblsum" Margin="192,77,555,326"/>
+        <Button x:Name="btnkvot" HorizontalAlignment="Left" Margin="437,212,0,0" VerticalAlignment="Top" Click="btnkvot_Click" Width="46" Height="30" RenderTransformOrigin="-0.87,-0.265" Content="/"/>
+        <Button x:Name="btnadd" HorizontalAlignment="Left" Margin="330,212,0,0" VerticalAlignment="Top" Click="btnadd_Click" Width="40" Height="30" Content="+"/>
+        <Button x:Name="btnsub" HorizontalAlignment="Left" Margin="281,212,0,0" VerticalAlignment="Top" Click="btnsub_Click" Width="43" Height="30" Content="-"/>
+        <TextBox x:Name="txtres" HorizontalAlignment="Left" Margin="113,41,0,0" VerticalAlignment="Top" Width="120" Text="Resultat"/>
 
     </Grid>
 </Window>

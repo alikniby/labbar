@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppgift4\\Uppgift4\\Uppgift4.csproj",
-      "projectName": "Uppgift4",
-      "projectPath": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppgift4\\Uppgift4\\Uppgift4.csproj",
+      "projectUniqueName": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppgift4\\Uppgift4\\Uppgift7ochuppgift4.csproj",
+      "projectName": "Uppgift7ochuppgift4",
+      "projectPath": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppgift4\\Uppgift4\\Uppgift7ochuppgift4.csproj",
       "packagesPath": "C:\\Users\\alka1\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppgift4\\Uppgift4\\obj\\",
       "projectStyle": "PackageReference",
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

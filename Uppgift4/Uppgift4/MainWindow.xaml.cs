@@ -25,9 +25,44 @@ namespace Uppgift4
             InitializeComponent();
         }
 
+        private void Btntext_Click(object sender, RoutedEventArgs e)
+        {
+
+            string vis = "dölj lösenord";
+
+            if (LblPassword.IsVisible)
+            {
+                LblPassword.Visibility = Visibility.Hidden;
+                Btnhidden.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Btnhidden.Visibility = Visibility.Visible;
+                LblPassword.Visibility= Visibility.Visible;
+                Btntext.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void Btnhidden_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            LblPassword.Visibility = Visibility.Visible;
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btnhidden_Click(object sender, RoutedEventArgs e)
+        {
+            LblPassword.Visibility= Visibility.Hidden;
+            Btnhidden.Visibility = Visibility.Hidden;
+            Btntext.Visibility = Visibility.Visible;
         }
     }
 }

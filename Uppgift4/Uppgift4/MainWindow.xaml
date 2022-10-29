@@ -8,9 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button>
-            <Button x:Name="Btntext" Content="Visa lösenord" Height="52" Width="80" Click="Button_Click"/>
+            <Button x:Name="Btntext" Content="Visa lösenord" Height="52" Width="80" Click="Btntext_Click"/>
         </Button>
         <Label x:Name="LblPassword" Content="Sesam öppna dig!" Margin="326,139,326,246" Visibility="Hidden"/>
+        <Button x:Name="Btnhidden" Content="Dölj lösenord" HorizontalAlignment="Center" Margin="0,256,0,0" VerticalAlignment="Top" Height="40" Width="102" Click="Btnhidden_Click" Visibility="Hidden"/>
 
     </Grid>
 </Window>

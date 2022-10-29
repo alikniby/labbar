@@ -28,13 +28,16 @@ namespace Uppgift5
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnkvot_Click(object sender, RoutedEventArgs e)
         {
-            int a = Convert.ToInt32(Num1.Text);
-            int b = Convert.ToInt32(Num2.Text);
-            int sum = a+ b;
+           // Man kan även använda sig av float eller decimal skulle jag gissa för att få fram samma resultat.
+            double a = Convert.ToInt32(Num1.Text);
+            double b = Convert.ToInt32(Num2.Text);
+            double sum = a/ b;
             btnsum.Text = sum.ToString();
-            
+            Math.Round(sum, 2);
+            txtres.Text = "Kvot";
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -50,6 +53,43 @@ namespace Uppgift5
         }
 
         private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnmulti_Click(object sender, RoutedEventArgs e)
+        {
+            double a = Convert.ToInt32(Num1.Text);
+            double b = Convert.ToInt32(Num2.Text);
+            double sum = a * b;
+            btnsum.Text = sum.ToString();
+            Math.Round(sum, 2);
+            txtres.Text = "Produkt";
+
+        }
+
+        private void btnadd_Click(object sender, RoutedEventArgs e)
+        {
+            double a = Convert.ToInt32(Num1.Text);
+            double b = Convert.ToInt32(Num2.Text);
+            double sum = a + b;
+            btnsum.Text = sum.ToString();
+            Math.Round(sum, 2);
+            txtres.Text = "Summa";
+
+        }
+
+        private void btnsub_Click(object sender, RoutedEventArgs e)
+        {
+            double a = Convert.ToInt32(Num1.Text);
+            double b = Convert.ToInt32(Num2.Text);
+            double sum = a - b;
+            btnsum.Text = sum.ToString();
+            Math.Round(sum, 2);
+            txtres.Text = "Differens";
+        }
+
+        private void btnres_Click(object sender, RoutedEventArgs e)
         {
 
         }

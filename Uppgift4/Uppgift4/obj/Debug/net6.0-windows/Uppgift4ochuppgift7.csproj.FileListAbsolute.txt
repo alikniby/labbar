@@ -1,0 +1,5 @@
+C:\Users\alka1\source\repos\alikniby\labbar\Uppgift4\Uppgift4\obj\Debug\net6.0-windows\Uppgift4ochuppgift7.csproj.AssemblyReference.cache
+C:\Users\alka1\source\repos\alikniby\labbar\Uppgift4\Uppgift4\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\alka1\source\repos\alikniby\labbar\Uppgift4\Uppgift4\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\alka1\source\repos\alikniby\labbar\Uppgift4\Uppgift4\obj\Debug\net6.0-windows\Uppgift4ochuppgift7_MarkupCompile.cache
+C:\Users\alka1\source\repos\alikniby\labbar\Uppgift4\Uppgift4\obj\Debug\net6.0-windows\Uppgift4ochuppgift7_MarkupCompile.lref
