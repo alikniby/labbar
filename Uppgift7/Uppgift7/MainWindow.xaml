@@ -1,0 +1,15 @@
+﻿<Window x:Class="Uppgift7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uppgift7"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="LblPassword" Content="Sesam öppna dig!" HorizontalAlignment="Left" Margin="362,161,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <Button x:Name="Btnhidden" Content="Dölj lösenord" HorizontalAlignment="Left" Margin="336,248,0,0" VerticalAlignment="Top" Height="51" Width="147" Click="Btnhidden_Click" Visibility="Hidden"/>
+        <Button x:Name="Btntext" Content="Visa lösenord" HorizontalAlignment="Left" Margin="336,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-1.018,-6.858" Height="51" Width="146" Click="Btntext_Click"/>
+
+    </Grid>
+</Window>
