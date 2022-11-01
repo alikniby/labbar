@@ -23,7 +23,10 @@ namespace Uppgift10a
     {
         public MainWindow()
         {
+            
+
             InitializeComponent();
+           
         }
 
         private void TxtName_TextChanged(object sender, TextChangedEventArgs e)
@@ -46,9 +49,10 @@ namespace Uppgift10a
             name = TxtName.Text;
             Convert.ToInt32(TxtAge.Text);
             age = Convert.ToInt32(TxtAge.Text);
+            if (RdNoadult.IsChecked== true)    
             if (age < 15)
             {
-                TxtRes.Text = "Hej " + name +" Du är " + age + " du får kolla på filmer med åldersgränsen 11 år ";
+                TxtRes.Text = "Hej " + name + " Du är " + age + " du får kolla på filmer med åldersgränsen 11 år ";
             }
             if (age == 15)
             {
@@ -63,24 +67,34 @@ namespace Uppgift10a
                 TxtRes.Text = "Hej " + name + " Du är " + age + " du får kolla på filmer med åldersgränsen 7 år ";
             }
             
+            
+
+            if (RdAdult.IsChecked==true)
+            {
+                if (age < 15)
+                {
+                    TxtRes.Text = "Hej " + name + " Du är " + age +
+                        " år gammal. Då får du se filmer med åldersgräns upp till 11 år. Det spelar ingen roll att du går tillsammans med en vuxen.";
+                    if (age <= 8)
+                    {
+                        TxtRes.Text = "Hej " + name + " Du är " + age +
+                            " och får se filmer med åldersgräns upp till 11 år eftersom du har en vuxen med dig”";
+                    }
+                }
+                
+            }
+            
 
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
-
         {
-   
-            int age;
-            string name;
-            Convert.ToString(TxtName.Text);
-            name = TxtName.Text;
-            Convert.ToInt32(TxtAge.Text);
-            age = Convert.ToInt32(TxtAge.Text);
-            if (age < 15)
-            {
-                BtnCheck_Click(sender, e);
-                TxtRes.Text ="sjukatt" + age;
-            }
+
+        }
+
+        private void RdNoadult_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

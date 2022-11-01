@@ -14,7 +14,7 @@
         <Label x:Name="Lblname" Content="Namn" HorizontalAlignment="Left" Margin="52,67,0,0" VerticalAlignment="Top"/>
         <Label x:Name="LblAge" Content="Ålder" HorizontalAlignment="Left" Margin="52,123,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.793,2.488"/>
         <RadioButton x:Name="RdAdult" Content="Med vuxen" HorizontalAlignment="Left" Margin="275,136,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="RdNoadult" Content="Utan vuxen" HorizontalAlignment="Left" Margin="274,164,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RdNoadult" Content="Utan vuxen" HorizontalAlignment="Left" Margin="274,164,0,0" VerticalAlignment="Top" Checked="RdNoadult_Checked"/>
 
 
     </Grid>
