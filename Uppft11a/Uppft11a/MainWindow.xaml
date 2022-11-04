@@ -9,9 +9,10 @@
     <Grid>
         <TextBox x:Name="txtGuess" HorizontalAlignment="Left" Margin="293,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="BtnRan" Content="Slumpa" HorizontalAlignment="Left" Margin="440,184,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.097,-0.221" Click="BtnRan_Click"/>
-        <Button x:Name="BtnGuess" Content="Slumpa/Gissa" HorizontalAlignment="Left" Margin="277,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.097,-0.221" Height="28" Width="152" Click="BtnGuess_Click"/>
-        <TextBox x:Name="btntest" HorizontalAlignment="Left" Margin="293,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="BtnGuess" Content="Gissa" HorizontalAlignment="Left" Margin="277,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.097,-0.221" Height="28" Width="152" Click="BtnGuess_Click" IsEnabled="False"/>
         <Label x:Name="lblres" Content="" HorizontalAlignment="Left" Margin="219,268,0,0" VerticalAlignment="Top" Height="127" Width="265"/>
+        <ListBox x:Name="Listtest" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="85,83,619,217" Visibility="Visible"/>
+        <Label x:Name="lbltest2" Content="Label" HorizontalAlignment="Left" Height="13" Margin="329,93,0,0" VerticalAlignment="Top" Width="0"/>
 
     </Grid>
 </Window>

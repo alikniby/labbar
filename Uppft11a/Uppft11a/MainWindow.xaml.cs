@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,100 +22,91 @@ namespace Uppft11a
     /// </summary>
     public partial class MainWindow : Window
     {
-        Random randomNr = new Random();
-        
-  
 
-        public MainWindow(int rndValue)
+        //deklererar två int
+
+        int slumpTal =0;
+        int guess;
+        int counter = 0;
+
+        public MainWindow()
         {
             InitializeComponent();
-       
-            int slumpliv = randomNr.Next(1, 1000);
-            
-            btntest.Text = Convert.ToString(slumpliv);
         }
 
         
 
         private void BtnRan_Click(object sender, RoutedEventArgs e)
         {
+            //skapar slump nr med hjälp av klassen random
+            BtnGuess.IsEnabled = true;
           
+       
 
+            Random randomNr = new Random();
+            slumpTal = randomNr.Next(1, 1000);
+            Listtest.Items.Add(Convert.ToString(slumpTal))  ;
+            
 
         }
-     
 
         private void BtnGuess_Click(object sender, RoutedEventArgs e)
-        {
-            
-            /* string randsum;
-             int guess;
-             int rando = Rand.Next(0, 100);
-
-             guess = Convert.ToInt32(txtGuess.Text);
-             randsum = Convert.ToString(rando);
-
-             if (rando > guess)
-             {
-                 TxtRes.Text = Convert.ToString(rando + "Inte  nära kompis");
-             }
-             else
-             {
-                 TxtRes.Text = Convert.ToString(rando + "Det är nära de är bra ");
-             }
-             if (rando == guess)
-             {
-                 TxtRes.Text = Convert.ToString(rando + "HELT RÄTTT");
-             }*/
-
-            string randsum;
-            bool guessnr = false;
-            int slumpliv = randomNr.Next(1000);
-            randsum = Convert.ToString(slumpliv);
-            int guess = Convert.ToInt32(slumpliv);
-            int guess2 = Convert.ToInt32(txtGuess.Text);
-            var diffrence = guess2 - slumpliv;
-            diffrence = Math.Abs(diffrence);
-
-            if (diffrence >= 1 && diffrence <= 50)
+        {    counter++;
+            //Här indiekrar jag att textfältet inte ska krasha när den är  tom om den inte är tom ska den använda sig av string guess för att skriva in text i fältet
+            if (string.IsNullOrEmpty(txtGuess.Text))
             {
-                lblres.Content = Convert.ToString(" För HÖGT nummer" + slumpliv);
-            }
-            else if (diffrence >= 51 && diffrence <= 99)
-            {
-                lblres.Content = Convert.ToString(" För HÖGT nummer" + slumpliv);
-            }
-            else if (diffrence >= 99 && diffrence <= 149)
-            {
-                lblres.Content = Convert.ToString(" För HÖGT nummer" + slumpliv);
-            }
-            else if (diffrence >= 150 && diffrence <= 201)
-            {
-                lblres.Content = Convert.ToString(" För HÖGT nummer" + slumpliv);
-            }
-            else if (diffrence == 0)
-            {
-                lblres.Content = Convert.ToString("HELT RÄTT " + slumpliv);
-            }
-            
-
-
-
-
-
-            /*if (slumpliv > 1 && slumpliv <= 100)
-            {
-                TxtRes.Text = Convert.ToString("  Alldels för långt ifrån kompis" + slumpliv);
-
+                return;
             }
             else
             {
-                TxtRes.Text = Convert.ToString("  Närmare" + slumpliv);
-            }*/
+               guess = Convert.ToInt32(txtGuess.Text);
 
 
+            }
+
+
+            // för att få fram skillnaden mellan inmatade talet och slumptalet så tar jag båda minusvarandra och lagrar det i en variabel vid namnet diffrence, därefter anropas funktionen absolutbelopp för at få talet positiv hela tiden
+                var diffrence = guess - slumpTal;
+                diffrence = Math.Abs(diffrence);
+
+
+            //If villkor som säger att ifall skillnaden mellan inmatade siffra  minus slumptal är större än hundra eller mindre än hundra
+             if (guess > 1000)
+            {
+                lblres.Content = Convert.ToString(" talet måste vara mellan 1-1000");
+            }
+            else if (guess < slumpTal && diffrence >= 1 && diffrence <= 100)
+             {
+                 lblres.Content = Convert.ToString(" För LÅGT nummer");
+
+             }
+             else if (guess > slumpTal && diffrence >= 1 && diffrence <= 100)
+             {
+                 lblres.Content = Convert.ToString("  högt nummer");
+             }
+             else if (guess > slumpTal && diffrence >= 101)
+             {
+                 lblres.Content = Convert.ToString(" Alldels för långt ifrån lågt nummer");
+             }
+             else if (guess < slumpTal && diffrence >= 101)
+             {
+                 lblres.Content = Convert.ToString(" Alldels för långt ifrån högt");
+             }
+           
+             
+             else 
+             {
+                lblres.Content = Convert.ToString("HELT RÄTT du gissade rätt efter " + counter + " gånger") ;
+                
+             }
+
+             
+           
 
         }
+
+
     }
     }
+       
 

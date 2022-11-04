@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppft11a\\Uppft11a\\Uppft11a.csproj",
+      "projectUniqueName": "C:\\Users\\alka1\\Desktop\\source\\repos\\alikniby\\labbar\\Uppft11a\\Uppft11a\\Uppft11a.csproj",
       "projectName": "Uppft11a",
-      "projectPath": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppft11a\\Uppft11a\\Uppft11a.csproj",
+      "projectPath": "C:\\Users\\alka1\\Desktop\\source\\repos\\alikniby\\labbar\\Uppft11a\\Uppft11a\\Uppft11a.csproj",
       "packagesPath": "C:\\Users\\alka1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alka1\\source\\repos\\alikniby\\labbar\\Uppft11a\\Uppft11a\\obj\\",
+      "outputPath": "C:\\Users\\alka1\\Desktop\\source\\repos\\alikniby\\labbar\\Uppft11a\\Uppft11a\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
