@@ -23,7 +23,7 @@ namespace Uppft11a
     public partial class MainWindow : Window
     {
 
-        //deklererar två int
+        //deklererar  int
 
         int slumpTal =0;
         int guess;
