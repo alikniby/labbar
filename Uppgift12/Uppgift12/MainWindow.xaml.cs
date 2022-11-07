@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
@@ -14,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace Uppgift12
 {
@@ -22,18 +25,23 @@ namespace Uppgift12
     /// </summary>
     public partial class MainWindow : Window
     {
-        int procent = 0;
-        int testar;
+        int rndNr;
+        int antalKast;
         int counter = 0;
         int countertwo = 0;
-        int testar2 =1;
+        int Antalfrsk = 1;
+
+
+
 
 
         public MainWindow()
         {
             InitializeComponent();
+
             double start = Prgbar.Value = 50;
             lblvalue.Content = start + " %";
+
 
 
         }
@@ -47,47 +55,57 @@ namespace Uppgift12
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            double value = Prgbar.Value = 100;
-            lblvalue.Content = value + " %";
-            Random rnd = new Random();
-            procent = rnd.Next(1, 3);
-            lblotur.Content = Convert.ToString(procent) + "Mindre otur";
-            testar = Convert.ToInt32(txtbox.Text);
+
+
+            antalKast = Convert.ToInt32(txtbox.Text);
 
             double start = Prgbar.Value = 50;
             double going = Prgbar.Value = 25;
             double full = Prgbar.Maximum = 100;
             double minus = Prgbar.Minimum = 0;
-            do
+
+
+
+            //{
+            for (int i = 0; i < antalKast; i++)
             {
-            
-                if (procent == 2 && procent != 3)
+                Random rnd = new Random();
+                rndNr = rnd.Next(0, 10);
+                if (rndNr <= 5)
                 {
 
-                    Prgbar.Value = start + start;
-                    lblvalue.Content = start + start + " %";
+                    Prgbar.Value = start + going;
+                    lblvalue.Content = start + going + " %";
+
                     countertwo++;
-                    count.Content = Convert.ToString("Antal mer otur" + testar2);
+
+                    lblcount.Content = Convert.ToString("Antal rätt håll" + countertwo);
+                    lblcount2.Content = Convert.ToString("Antal  fel håll " + counter);
                 }
-                else if (procent == 1 && procent != 3)
+                else if (rndNr >= 6)
                 {
-                    Prgbar.Value = minus;
-                    lblvalue.Content = minus + " %";
+                    Prgbar.Value = start - going;
+                    lblvalue.Content = start - going + " %";
                     counter++;
-                    counttwo.Content = Convert.ToString("Antal mindre otur är resten" + testar2);
+
+                    lblcount.Content = Convert.ToString("Antal rätt håll" + counter);
+                    lblcount2.Content = Convert.ToString("Antal  fel håll " + countertwo);
                 }
                 else
                 {
                     return;
                 }
 
+            }
 
-                testar2++;
-            } while (testar2 <= testar);
-            counttwo.Content = Convert.ToString("Antal mindre otur är resten" + counter);
-            count.Content = Convert.ToString("Antal mer otur" + countertwo);
 
-        
+            Antalfrsk++;
+            // } while (Antalfrsk <= antalKast);
+            //lblcount2.Content = Convert.ToString("Antal mer otur " + countertwo);
+            //     lblcount.Content = Convert.ToString("Antal mindre otur " + counter);
+
+
+
 
 
 
@@ -121,22 +139,103 @@ namespace Uppgift12
 
         }
 
-        private void txtbox_TextChanged(object sender, TextChangedEventArgs e)
+
+
+
+        private int plus = +5;
+        private int minus = -5;
+
+        private void btnLuck_Click(object sender, RoutedEventArgs e)
         {
-            
+            int[] kast = { 1, 3, 5, 8, 10 };
+
+
+            Prgbar.Value += 5;
+            for (int i = 0; i < kast.Length; i++)
+            {
+                plus = countertwo;
+                minus = counter;
+
+
+
+
+                int del = (int)Prgbar.Value;
+
+                lblvalue.Content = del + " %";
+                if (countertwo <= 0 || counter > antalKast)
+                {
+                    break;
+                }
+                else
+                {
+                    lblcount.Content = Convert.ToString("Antal  fel håll " + counter++);
+                    lblcount2.Content = Convert.ToString("antal rätt håll" + countertwo--);
+
+                }
+
+
+              
+
+            }
+        }
+        private int plus2 = +5;
+        private int minus2 = -5;
+        private void btnUnluck_Click(object sender, RoutedEventArgs e)
+        {
+            int[] kast = { 1, 3, 5, 8, 10 };
+
+
+            Prgbar.Value -= 5;
+            for (int i = 0; i < kast.Length; i++)
+            {
+                plus2 = countertwo;
+                minus2 = counter;
+
+
+
+
+                int del = (int)Prgbar.Value;
+
+                lblvalue.Content = del + " %";
+
+
+                if (counter <= 0 || countertwo > antalKast)
+                {
+                    break;
+                }
+                else
+                {
+                    lblcount.Content = Convert.ToString("Antal  rätt håll " + counter--);
+                    lblcount2.Content = Convert.ToString("antal fel håll" + countertwo++);
+
+                }
+
+               
+
+
+
+
+            }
         }
 
-        private void btnreset_Click(object sender, RoutedEventArgs e)
+        private void txtbox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
-
 
         }
     }
-    
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
