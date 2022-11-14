@@ -105,7 +105,10 @@ namespace Uppft11a
 
         }
 
+        private void txtGuess_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
+        }
     }
     }
        

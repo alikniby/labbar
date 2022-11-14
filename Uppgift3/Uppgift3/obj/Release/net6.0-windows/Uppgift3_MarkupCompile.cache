@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\alka1\Desktop\source\repos\alikniby\labbar\Uppgift3\Uppgift3\obj\Release\net6.0-windows\
+=======
+C:\Users\alka1admin\Source\Repos\alikniby\labbar\Uppgift3\Uppgift3\obj\Release\net6.0-windows\
+>>>>>>> 60d27fb18d71394a2ba770133fe8c4c131c2c919
 Uppgift3
 none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+<<<<<<< HEAD
 C:\Users\alka1\Desktop\source\repos\alikniby\labbar\Uppgift3\Uppgift3\App.xaml
+=======
+C:\Users\alka1admin\Source\Repos\alikniby\labbar\Uppgift3\Uppgift3\App.xaml
+>>>>>>> 60d27fb18d71394a2ba770133fe8c4c131c2c919
 11407045341
 
 3-1233169557

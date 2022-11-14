@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Uppgift6
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\alka1\Desktop\source\repos\alikniby\labbar\Uppgift6\Uppgift6\
+=======
+build_property.ProjectDir = C:\Users\alka1admin\Source\Repos\alikniby\labbar\Uppgift6\Uppgift6\
+>>>>>>> 60d27fb18d71394a2ba770133fe8c4c131c2c919
