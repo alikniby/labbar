@@ -1,0 +1,17 @@
+﻿<Window x:Class="Uppgift14.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uppgift14"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="listNum1">
+        <TextBox x:Name="txtNumber" HorizontalAlignment="Left" Margin="206,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="btnNumber_TextChanged"/>
+        <TextBox x:Name="txttNumCalc" HorizontalAlignment="Left" Margin="206,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txttNumCalc_TextChanged"/>
+        <Button x:Name="btncalc" Content="OK" HorizontalAlignment="Left" Margin="355,128,0,0" VerticalAlignment="Top" Click="btncalc_Click"/>
+        <ListBox x:Name="listNum"  Margin="437,70,201,69" IsSynchronizedWithCurrentItem="False"/>
+        <Button x:Name="btnres" Content="Nolställ" HorizontalAlignment="Left" Margin="375,175,0,0" VerticalAlignment="Top" Click="btnres_Click"/>
+
+    </Grid>
+</Window>
