@@ -1,0 +1,16 @@
+﻿<Window x:Class="uppgift15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:uppgift15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="btnCount">
+        <TextBox x:Name="txtInsert" HorizontalAlignment="Left" Margin="113,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Width="287" Height="161" TextChanged="TextBox_TextChanged" />
+        <Button x:Name="btnCalc" Content="Räkna" HorizontalAlignment="Left" Margin="113,386,0,0" VerticalAlignment="Top" Click="btnCalc_Click"/>
+        <TextBox x:Name="txtChar" HorizontalAlignment="Left" Margin="113,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblRes" Content="Label" HorizontalAlignment="Center" Margin="0,386,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
