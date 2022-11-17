@@ -41,7 +41,6 @@ namespace Uppft11a
             slumpTal = randomNr.Next(1, 1000);
             Listtest.Items.Add(Convert.ToString(slumpTal))  ;
             
-
         }
 
         private void BtnGuess_Click(object sender, RoutedEventArgs e)

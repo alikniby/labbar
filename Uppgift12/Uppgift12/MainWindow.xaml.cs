@@ -30,7 +30,7 @@ namespace Uppgift12
         int counter = 0;
         int countertwo = 0;
         int Antalfrsk = 1;
-
+        
 
 
 
@@ -107,10 +107,8 @@ namespace Uppgift12
    
         private void btnLuck_Click(object sender, RoutedEventArgs e)
         {
-            
 
-
-            if (countertwo < 0 || counter > antalKast)
+            if (countertwo < 0 || counter > antalKast || (int)Prgbar.Value == (int)Prgbar.Maximum)
             {
                 return;
             }
@@ -118,17 +116,18 @@ namespace Uppgift12
             {
                 lblunluck.Content = Convert.ToString("Antal  fel håll " + counter++);
                 lblluck.Content = Convert.ToString("antal rätt håll" + countertwo--);
+                Prgbar.Value += 5;
 
-
+                lblvalue.Content = Prgbar.Value + " %";
             }
-            Prgbar.Value += 5;
-            lblvalue.Content = " %";
+           
+                     
         }
          
       
         private void btnUnluck_Click(object sender, RoutedEventArgs e)
         {
-                if (counter < 0 || countertwo > antalKast)
+                if (counter < 0 || countertwo > antalKast || (int)Prgbar.Value == (int)Prgbar.Minimum)
                 {
                     return;
                 }
@@ -137,7 +136,8 @@ namespace Uppgift12
                     lblunluck.Content = Convert.ToString("antal fel håll" + countertwo++);
                     lblluck.Content = Convert.ToString("Antal  rätt håll " + counter--);
                         Prgbar.Value -= 5;
-                    lblvalue.Content = " %";
+                
+                    lblvalue.Content = Prgbar.Value + " %";
                     
                 }
             
