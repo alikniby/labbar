@@ -21,13 +21,13 @@ namespace Uppgift13
     public partial class MainWindow : Window
     {
 
-        string[] frukt = { "äpple", "päron", "banan", "ananas" };
+        string[] frukt = { "äpple", "päron", "banan" };
 
-        List<string> dyfrukter = new List<string>();
+
         int primeNr = 0;
         int prime = 2;
 
-        bool isMoreFruit = true;
+       
 
         Random rand = new Random();
 
@@ -40,56 +40,64 @@ namespace Uppgift13
 
         private void fruktett_Click(object sender, RoutedEventArgs e)
         {
-            primeNr = frukt.Length / prime;
-            if (isMoreFruit == true)
-            {
-                primeNr = frukt.Length / prime;
-                MessageBox.Show("tredje frukten i salladen är " + frukt[0] + " och " + frukt[3]);
-            }
-            else
-            {
-                MessageBox.Show("tredje frukten i salladen är " + frukt[0]);
+             primeNr = frukt.Length / prime; 
+           
+            for (int i = 0; i < frukt.Length; i++)
+            { 
+                
+                MessageBox.Show("första frukten i salladen är " + frukt[i]);
+               
+                if (i == 0)
+                {
+                   
+                   return;
+                }
 
             }
 
 
-
-
-
-
-
-            {
-            }
+            //{
+            //}
         }
 
         private void frukttwo_Click(object sender, RoutedEventArgs e)
         {
-            primeNr = frukt.Length / prime;
-            if (isMoreFruit == true)
+            for (int i = 2; i < frukt.Length; i++)
             {
-                primeNr = frukt.Length / prime;
-                MessageBox.Show("tredje frukten i salladen är " + frukt[1] + " och " + frukt[3]);
-            }
-            else
-            {
-                MessageBox.Show("tredje frukten i salladen är " + frukt[1]);
+                primeNr = frukt.Length % prime;
+                if (primeNr != 0)
+                {
+                    primeNr = frukt.Length / prime;
+                    MessageBox.Show("tredje frukten i salladen är " + frukt[i] + " och " + frukt[i-1]);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("tredje frukten i salladen är " + frukt[i]);
 
+                }
             }
+
+
         }
 
         private void frukttre_Click(object sender, RoutedEventArgs e)
         {
-            primeNr = frukt.Length / prime;
-            if (isMoreFruit == true)
+
+
+            for (int i = frukt.Length-1; i < frukt.Length; i++)
             {
-                primeNr = frukt.Length / prime;
-                MessageBox.Show("tredje frukten i salladen är " + frukt[2] + " och " + frukt[3]);
-            }
-            else
-            {
-                MessageBox.Show("tredje frukten i salladen är " + frukt[2]);
+
+                MessageBox.Show("första frukten i salladen är " + frukt[i]);
+
+                if (i == frukt.Length - 1)
+                {
+
+                    return;
+                }
 
             }
+
         }
     }
 }

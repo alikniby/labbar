@@ -47,11 +47,11 @@ namespace uppgift15
                    count++;
                     lblRes.Content = "Du har skrivit ut " +" " + item + " " + count + "  gånger";
                 }
-                else
-                {
-                    count = 0;
-                    lblRes.Content = "Du har skrivit ut " + " " + texttwo + " " + count + "  gånger";
-                }
+                //else
+                //{
+                    //count++;
+                    //lblRes.Content = "Du har skrivit ut " + " " + texttwo + " " + count + "  gånger";
+                //}
             
         
 }          

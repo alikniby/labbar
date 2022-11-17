@@ -22,26 +22,20 @@ namespace Uppft11a
     /// </summary>
     public partial class MainWindow : Window
     {
-
         //deklererar  int
 
-        int slumpTal =0;
+        int slumpTal= 0;
         int guess;
-        int counter = 0;
+        int counter;
 
         public MainWindow()
         {
             InitializeComponent();
         }
-
-        
-
         private void BtnRan_Click(object sender, RoutedEventArgs e)
         {
             //skapar slump nr med hjälp av klassen random
             BtnGuess.IsEnabled = true;
-          
-       
 
             Random randomNr = new Random();
             slumpTal = randomNr.Next(1, 1000);
@@ -51,7 +45,7 @@ namespace Uppft11a
         }
 
         private void BtnGuess_Click(object sender, RoutedEventArgs e)
-        {    counter++;
+        {    
             //Här indiekrar jag att textfältet inte ska krasha när den är  tom om den inte är tom ska den använda sig av string guess för att skriva in text i fältet
             if (string.IsNullOrEmpty(txtGuess.Text))
             {
@@ -61,9 +55,9 @@ namespace Uppft11a
             {
                guess = Convert.ToInt32(txtGuess.Text);
 
-
+                
             }
-
+             counter++;
 
             // för att få fram skillnaden mellan inmatade talet och slumptalet så tar jag båda minusvarandra och lagrar det i en variabel vid namnet diffrence, därefter anropas funktionen absolutbelopp för at få talet positiv hela tiden
                 var diffrence = guess - slumpTal;
@@ -93,14 +87,11 @@ namespace Uppft11a
                  lblres.Content = Convert.ToString(" Alldels för långt ifrån högt");
              }
            
-             
              else 
              {
                 lblres.Content = Convert.ToString("HELT RÄTT du gissade rätt efter " + counter + " gånger") ;
                 
              }
-
-             
            
 
         }
